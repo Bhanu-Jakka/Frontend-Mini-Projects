@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Image Gallery</h1>
+
+    <div class="filters">
+        <button onclick="filterImages('all')">All</button>
+        <button onclick="filterImages('nature')">Nature</button>
+        <button onclick="filterImages('animals')">Animals</button>
+        <button onclick="filterImages('people')">People</button>
+    </div>
+
+    <div class="gallery">
+        <div class="gallery-item nature">
+            <img src="images/1.jpg" onclick="openLightbox(0)">
+        </div>
+
+        <div class="gallery-item nature">
+            <img src="images/2.jpg" onclick="openLightbox(1)">
+        </div>
+
+        <div class="gallery-item animals">
+            <img src="images/3.jpg" onclick="openLightbox(2)">
+        </div>
+
+        <div class="gallery-item people">
+            <img src="images/4.jpg" onclick="openLightbox(3)">
+        </div>
+
+        <div class="gallery-item nature">
+            <img src="images/5.jpg" onclick="openLightbox(4)">
+        </div>
+
+        <div class="gallery-item animals">
+            <img src="images/6.jpg" onclick="openLightbox(5)">
+        </div>
+
+        <div class="gallery-item people">
+            <img src="images/7.jpg" onclick="openLightbox(6)">
+        </div>
+
+        <div class="gallery-item people">
+            <img src="images/8.jpg" onclick="openLightbox(7)">
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <button class="close" onclick="closeLightbox()">×</button>
+        <button class="prev" onclick="previousImage()">❮</button>
+
+        <img id="lightbox-image">
+
+        <button class="next" onclick="nextImage()">❯</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
