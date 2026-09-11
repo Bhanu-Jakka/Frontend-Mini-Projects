@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: white;
+
+    padding: 20px;
+}
+
+.game-container {
+    width: 100%;
+    max-width: 450px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    background-color: #1e1e2f;
+
+    border-radius: 20px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.mode-buttons {
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+.mode-buttons button {
+    flex: 1;
+
+    padding: 10px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #303047;
+    color: white;
+
+    cursor: pointer;
+}
+
+.mode-buttons button.active {
+    background-color: #00a8cc;
+}
+
+#status {
+    margin-bottom: 20px;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.board {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 10px;
+
+    margin-bottom: 25px;
+}
+
+.cell {
+    aspect-ratio: 1;
+
+    border: none;
+    border-radius: 12px;
+
+    background-color: #303047;
+
+    color: white;
+
+    font-size: 50px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.cell:hover {
+    background-color: #3d3d5a;
+}
+
+.cell.x {
+    color: #00e5ff;
+}
+
+.cell.o {
+    color: #ffca28;
+}
+
+.restart {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: #00e5ff;
+    color: #141e30;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.restart:hover {
+    transform: translateY(-2px);
+    opacity: 0.85;
+}
+
+@media (max-width: 450px) {
+
+    .game-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .cell {
+        font-size: 40px;
+    }
+}
