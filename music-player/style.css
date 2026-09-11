@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e8e8e8;
+    font-family: Arial, sans-serif;
+    padding: 30px;
+}
+
+.music-player {
+    width: 380px;
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.album {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 20px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.music-icon {
+    font-size: 90px;
+    color: white;
+}
+
+#song-title {
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+#artist {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.time {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+#progress {
+    width: 100%;
+    cursor: pointer;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin: 20px 0;
+}
+
+.controls button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: #333;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.controls button:hover {
+    background: #555;
+    transform: scale(1.08);
+}
+
+#play {
+    width: 65px;
+    height: 65px;
+    background: #2575fc;
+    font-size: 25px;
+}
+
+#play:hover {
+    background: #125dcc;
+}
+
+.volume-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0 25px;
+}
+
+#volume {
+    width: 100%;
+    cursor: pointer;
+}
+
+.playlist {
+    text-align: left;
+}
+
+.playlist h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.song {
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    background: #f2f2f2;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.song span {
+    display: block;
+    font-weight: bold;
+}
+
+.song small {
+    color: #777;
+}
+
+.song:hover {
+    background: #ddd;
+}
+
+.song.active {
+    background: #2575fc;
+    color: white;
+}
+
+.song.active small {
+    color: white;
+}
+
+@media (max-width: 450px) {
+    .music-player {
+        width: 100%;
+    }
+
+    .album {
+        width: 150px;
+        height: 150px;
+    }
+
+    .music-icon {
+        font-size: 70px;
+    }
+}

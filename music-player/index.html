@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="music-player">
+
+        <div class="album">
+            <div class="music-icon">♫</div>
+        </div>
+
+        <h1 id="song-title">Dreams</h1>
+        <p id="artist">SoundHelix</p>
+
+        <div class="time">
+            <span id="current-time">0:00</span>
+            <span id="duration">0:00</span>
+        </div>
+
+        <input type="range" id="progress" value="0" min="0" max="100">
+
+        <div class="controls">
+            <button id="prev">⏮</button>
+            <button id="play">▶</button>
+            <button id="next">⏭</button>
+        </div>
+
+        <div class="volume-container">
+            <span>🔊</span>
+            <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+        </div>
+
+        <div class="playlist">
+            <h2>Playlist</h2>
+
+            <div class="song active" data-index="0">
+                <span>Dreams</span>
+                <small>SoundHelix</small>
+            </div>
+
+            <div class="song" data-index="1">
+                <span>Adventure</span>
+                <small>SoundHelix</small>
+            </div>
+
+            <div class="song" data-index="2">
+                <span>Summer</span>
+                <small>SoundHelix</small>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
